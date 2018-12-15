@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+
 import './App.css';
 
-import Header from '../header/Header';
+import Header from '../Header/Header';
+import Home from '../Home/Home';
 
 const navOptions = [
-    'Home',
-    'About',
-    'Login',
-    'Logout'
+    {
+      text: 'Home',
+      url: '/'
+    },
+    {
+      text: 'About',
+      url: '/About'
+    },
+    {
+      text: 'Login',
+      url: '/Login'
+    },
+    {
+      text: 'Logout',
+      url: '/Logout'
+    }
 ]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header classname="App-header" nav={navOptions}></Header>
+        <Route path="/" render={() => (<Header classname="App-header" nav={navOptions} />) }/>
+        <Route exact path="/" component={Home} />
       </div>
     );
   }
