@@ -5,6 +5,8 @@ import './App.css';
 
 import Header from '../Header/Header';
 import Home from '../Home/Home';
+import AvengersList from '../Secret/AvengersList';
+import Avenger from '../Secret/Avenger';
 
 const navOptions = [
     {
@@ -12,8 +14,8 @@ const navOptions = [
       url: '/'
     },
     {
-      text: 'About',
-      url: '/About'
+      text: 'Secret',
+      url: '/Secret'
     },
     {
       text: 'Login',
@@ -31,6 +33,9 @@ class App extends Component {
       <div className="App">
         <Route path="/" render={() => (<Header classname="App-header" nav={navOptions} />) }/>
         <Route exact path="/" component={Home} />
+        <Route exact path="/Secret" component={AvengersList} />
+        <Route exact path="/Avenger/:id" component={Avenger} />
+
       </div>
     );
   }

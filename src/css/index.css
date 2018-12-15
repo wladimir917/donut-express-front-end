@@ -16,3 +16,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.button-purple {
+  background-color: #593196;
+  height: 60px;
+  margin: 20px auto;
+  padding: 20px 40px;
+  color: white;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.button-purple:hover {
+  background-color: #9f78dd;
+}
