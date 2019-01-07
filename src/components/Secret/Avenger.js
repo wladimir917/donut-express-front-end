@@ -39,7 +39,7 @@ class Avenger extends Component {
         <p>{this.state.avenger.description}</p>
         <div>
           {this.state.movies.map(movie =>(
-              <div>{movie}</div>
+              <div key={movie}>{movie}</div>
           ))}
         </div>
         <button className="button-purple" onClick={() => this.props.history.goBack()}>Go Back</button>
